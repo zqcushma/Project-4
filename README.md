@@ -28,7 +28,19 @@ As we collected our data, we did not focus any attention on special attributes, 
 
 
 Our goal for our prediction model is to predict the consumption of 2025 for the United States and a separate model to produce 2025 for the United States.  
-This model creation function is designed for use with the Keras Tuner, a tool for hyperparameter tuning in TensorFlow, to automate the process of selecting the optimal architecture and settings for a neural network. The function dynamically constructs a sequential model suitable for binary classification tasks, with flexibility in the number of layers, neurons per layer, and the activation functions used. It begins with specifying the input dimensionality (44 features) and allows for the configuration of up to 10 hidden layers, each potentially containing up to 100 neurons. The Keras Tuner decides the precise architecture—specifically, the number of neurons in the first layer, the total number of layers, and the activation function (ReLU, Tanh, or Sigmoid) used across hidden layers. For binary outcomes, it concludes with a sigmoid-activated layer to output probabilities. In contrast, for continuous outputs, a linear activation would be used (though this is pre-configured for binary outputs). The model is compiled with the Adam optimizer and binary cross-entropy loss, making it suitable for binary classification problems. This approach leverages the power of hyperparameter optimization to enhance model performance by systematically exploring a range of configurations to find the most effective model architecture.
+
+We used a Gradient boosting is a machine learning technique used for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Here's how it works:
+1.	Initialization: It starts with a base model (often a simple average of the target variable) to make initial predictions.
+2.	Iterative Improvement:
+	•	For each iteration, the algorithm computes the residual, which is the difference between the observed and predicted values from the current model.
+	•	A new model (usually a decision tree) is then trained to predict these residuals.
+	•	This new model is added to the ensemble, with a coefficient called the learning rate (or shrinkage) applied to control the contribution of each new model. This learning rate is a small positive number (e.g., 0.1) that slows down the learning process to 		make the model more robust.
+3.	Additive Modeling:
+	•	The predictions from the new model are combined with the predictions from the existing ensemble to form updated predictions.
+	•	This process is repeated, with each new model focusing on the residuals (errors) left by the previous models.
+4.	Stopping Criteria:
+	•	This iterative process continues until a specified number of trees are added or no significant improvement can be made on the prediction accuracy.
+The main advantages of gradient boosting are its ability to handle different types of data, robustness to outliers, and effectiveness in capturing complex nonlinear patterns in data. However, it can be prone to overfitting if not carefully tuned, and it may require careful selection of parameters, such as the number of iterations, learning rate, and the depth of the trees.
 
 ## Contributors
 
