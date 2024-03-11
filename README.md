@@ -32,7 +32,7 @@ Our goal for our prediction model is to predict the consumption of 2025 for the 
 We used a Gradient boosting is a machine learning technique used for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. Here's how it works:
 1.	Initialization: It starts with a base model (often a simple average of the target variable) to make initial predictions.
 2.	Iterative Improvement:
-•	For each iteration, the algorithm computes the residual, which is the difference between the observed and predicted values from the current model.
+	•	For each iteration, the algorithm computes the residual, which is the difference between the observed and predicted values from the current model.  
 •	A new model (usually a decision tree) is then trained to predict these residuals.
 •	This new model is added to the ensemble, with a coefficient called the learning rate (or shrinkage) applied to control the contribution of each new model. This learning rate is a small positive number (e.g., 0.1) that slows down the learning process to 		make the model more robust.
 3.	Additive Modeling:
