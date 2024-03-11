@@ -33,15 +33,15 @@ We used a Gradient boosting is a machine learning technique used for regression 
 1.	Initialization: It starts with a base model (often a simple average of the target variable) to make initial predictions.
 2.	Iterative Improvement:
 	•	For each iteration, the algorithm computes the residual, which is the difference between the observed and predicted values from the current model.  
-•	A new model (usually a decision tree) is then trained to predict these residuals.
-•	This new model is added to the ensemble, with a coefficient called the learning rate (or shrinkage) applied to control the contribution of each new model. This learning rate is a small positive number (e.g., 0.1) that slows down the learning process to 		make the model more robust.
-3.	Additive Modeling:
-•	The predictions from the new model are combined with the predictions from the existing ensemble to form updated predictions.
-•	This process is repeated, with each new model focusing on the residuals (errors) left by the previous models.
-4.	Stopping Criteria:
-•	This iterative process continues until a specified number of trees are added or no significant improvement can be made on the prediction accuracy.
-The main advantages of gradient boosting are its ability to handle different types of data, robustness to outliers, and effectiveness in capturing complex nonlinear patterns in data. However, it can be prone to overfitting if not carefully tuned, and it may require careful selection of parameters, such as the number of iterations, learning rate, and the depth of the trees.
-
+	•	A new model (usually a decision tree) is then trained to predict these residuals.  
+	•	This new model is added to the ensemble, with a coefficient called the learning rate (or shrinkage) applied to control the contribution of each new model. This learning rate is a small positive number (e.g., 0.1) that slows down the learning process to 		make the model more robust.  
+3.	Additive Modeling:  
+	•	The predictions from the new model are combined with the predictions from the existing ensemble to form updated predictions.  
+	•	This process is repeated, with each new model focusing on the residuals (errors) left by the previous models.  
+4.	Stopping Criteria:  
+	•	This iterative process continues until a specified number of trees are added or no significant improvement can be made on the prediction accuracy.  
+The main advantages of gradient boosting are its ability to handle different types of data, robustness to outliers, and effectiveness in capturing complex nonlinear patterns in data. However, it can be prone to overfitting if not carefully tuned, and it may require careful selection of parameters, such as the number of iterations, learning rate, and the depth of the trees.  
+  
 ## Contributors
 
 - Eric Janson - Database
