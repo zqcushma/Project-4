@@ -1,15 +1,14 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 # Load the processed dataset
-data = pd.read_csv('../../Data/training_data.csv')
+data = pd.read_csv('../Data/processed_craft_beer_data.csv')  # Change the path for some reason Data/processed_craft_beer_data.csv doesnt work
 
 # Selecting the features and target variable
 # You might want to select more relevant features for your model
-X = data[['year', 'census_total_pop', 'census_percent_employed', 'tpc_state_beer_tax_rates_dollar_gal']]  # Example feature, include others as necessary
+X = data[['year', 'census_total_pop', 'census_percent_employed']]  # Example feature, include others as necessary
 y = data['ba_craft_beer_produced_gallons']
 
 # Split the data into training and testing sets
@@ -35,8 +34,7 @@ print(f'MSE: {mse}')
 
 # Predict for the year 2025
 # Adjust the features accordingly if your model uses more than the year
-total_population_2025 = 300000000  
+total_population_2025 = 5000000  
 percent_employed_2025 = 50
-tpc_state_beer_tax_rates_dollar_gal = .40
-prediction_2025 = gb_model.predict([[2025, total_population_2025, percent_employed_2025, tpc_state_beer_tax_rates_dollar_gal]])
+prediction_2025 = gb_model.predict([[2025, total_population_2025, percent_employed_2025]])
 print(f'Predicted craft beer production for 2025: {prediction_2025[0]} gallons')
