@@ -40,8 +40,12 @@ We used a Gradient boosting is a machine learning technique used for regression 
 	•	This process is repeated, with each new model focusing on the residuals (errors) left by the previous models.  
 4.	Stopping Criteria:  
 	•	This iterative process continues until a specified number of trees are added or no significant improvement can be made on the prediction accuracy.  
-The main advantages of gradient boosting are its ability to handle different types of data, robustness to outliers, and effectiveness in capturing complex nonlinear patterns in data. However, it can be prone to overfitting if not carefully tuned, and it may require careful selection of parameters, such as the number of iterations, learning rate, and the depth of the trees.  
-  
+The main advantages of gradient boosting are its ability to handle different types of data, robustness to outliers, and effectiveness in capturing complex nonlinear patterns in data. However, it can be prone to overfitting if not carefully tuned, and it may require careful selection of parameters, such as the number of iterations, learning rate, and the depth of the trees.
+
+We used a model to predict the production for each state for the year of 2025 using four data points for the x-axis which are (year, census total population, census percent employed, and state id) and we used craft beer produced in gallons for the y-axis. We looped through the code for each state to show us a visualization of production for each state.
+
+
+
 ## Contributors
 
 - Eric Janson - Database
