@@ -4,7 +4,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 # Load the processed dataset
-data = pd.read_csv('C:/Users/purot/Desktop/Boot_Camp/Projects/Project-4/Data/processed_craft_beer_data.csv')  # Change the path for some reason Data/processed_craft_beer_data.csv doesnt work
+data = pd.read_csv('../Data/processed_craft_beer_data.csv')  # Change the path for some reason Data/processed_craft_beer_data.csv doesnt work
 
 # Selecting the features and target variable
 # You might want to select more relevant features for your model
